@@ -1,6 +1,7 @@
 package com.atwenli.gmall.user.service;
 
 import com.atwenli.gmall.user.bean.UmsMember;
+import com.atwenli.gmall.user.bean.UmsMemberReceiveAddress;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ import java.util.List;
  */
 public interface UserService {
     List<UmsMember> getAllUser();
+
+    List<UmsMemberReceiveAddress> getAllUserAddressByMemberId(Long memberId);
 }

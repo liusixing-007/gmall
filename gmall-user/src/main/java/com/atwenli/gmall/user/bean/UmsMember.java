@@ -1,10 +1,18 @@
 package com.atwenli.gmall.user.bean;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
+import org.springframework.boot.autoconfigure.web.ResourceProperties;
 
+import javax.annotation.sql.DataSourceDefinition;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-
 public class UmsMember {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long memberLevelId;

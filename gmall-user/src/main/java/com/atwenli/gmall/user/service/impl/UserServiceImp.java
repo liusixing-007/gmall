@@ -1,15 +1,14 @@
 package com.atwenli.gmall.user.service.impl;
 
 import com.atwenli.gmall.user.bean.UmsMember;
-import com.atwenli.gmall.user.bean.UmsMemberLevel;
 import com.atwenli.gmall.user.bean.UmsMemberReceiveAddress;
 import com.atwenli.gmall.user.dao.UmsMemberLevelMapper;
 import com.atwenli.gmall.user.dao.UmsMemberMapper;
 import com.atwenli.gmall.user.dao.UmsMemberReceiveAddressMapper;
-import com.atwenli.gmall.user.dao.UserDao;
 import com.atwenli.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -30,7 +29,23 @@ public class UserServiceImp implements UserService {
 
     @Override
     public List<UmsMember> getAllUser() {
-        List<UmsMember>umsMembers=umsMemberMapper.selectAllUser();
+        List<UmsMember>umsMembers=umsMemberMapper.selectAll();
         return umsMembers;
+    }
+
+    @Override
+    public List<UmsMemberReceiveAddress> getAllUserAddressByMemberId(Long memberId) {
+
+        Example example = new Example(UmsMemberReceiveAddress.class);
+        example.createCriteria().andEqualTo("memberId",memberId);
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.selectByExample(example);
+
+/**
+ * 与如下效果相同
+ */
+//        UmsMemberReceiveAddress umsMemberReceiveAddress = new UmsMemberReceiveAddress();
+//        umsMemberReceiveAddress.setMemberId(memberId);
+//        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
+        return umsMemberReceiveAddresses;
     }
 }

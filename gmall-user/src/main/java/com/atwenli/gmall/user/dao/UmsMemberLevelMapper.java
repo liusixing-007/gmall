@@ -2,10 +2,10 @@ package com.atwenli.gmall.user.dao;
 
 import com.atwenli.gmall.user.bean.UmsMemberLevel;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.ResponseBody;
+import tk.mybatis.mapper.common.Mapper;
 
 @Repository
-public interface UmsMemberLevelMapper {
+public interface UmsMemberLevelMapper extends Mapper<UmsMemberLevel> {
     int deleteByPrimaryKey(Long id);
 
     int insert(UmsMemberLevel record);
