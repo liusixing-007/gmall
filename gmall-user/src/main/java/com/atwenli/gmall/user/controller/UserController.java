@@ -26,6 +26,7 @@ public class UserController {
     }
     @GetMapping(value = "getAllUser")
     public List<UmsMember> getAllUser(){
+        String s;
         List<UmsMember>  umsMembers=userService.getAllUser();
         return umsMembers;
     }
