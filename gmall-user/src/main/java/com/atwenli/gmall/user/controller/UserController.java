@@ -26,11 +26,13 @@ public class UserController {
     }
     @GetMapping(value = "getAllUser")
     public List<UmsMember> getAllUser(){
-        String s;
         List<UmsMember>  umsMembers=userService.getAllUser();
         return umsMembers;
     }
 
-
+    @GetMapping(value = "index1")
+    public String index1(){
+        return "dddddd1";
+    }
 
 }
