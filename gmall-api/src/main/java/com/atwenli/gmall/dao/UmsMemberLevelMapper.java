@@ -1,10 +1,8 @@
-package com.atwenli.gmall.user.dao;
+package com.atwenli.gmall.dao;
 
-import com.atwenli.gmall.user.bean.UmsMemberLevel;
-import org.springframework.stereotype.Repository;
+import com.atwenli.gmall.bean.UmsMemberLevel;
 import tk.mybatis.mapper.common.Mapper;
 
-@Repository
 public interface UmsMemberLevelMapper extends Mapper<UmsMemberLevel> {
     int deleteByPrimaryKey(Long id);
 

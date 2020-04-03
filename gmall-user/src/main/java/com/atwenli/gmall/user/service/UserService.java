@@ -1,7 +1,7 @@
 package com.atwenli.gmall.user.service;
 
-import com.atwenli.gmall.user.bean.UmsMember;
-import com.atwenli.gmall.user.bean.UmsMemberReceiveAddress;
+import com.atwenli.gmall.bean.UmsMember;
+import com.atwenli.gmall.bean.UmsMemberReceiveAddress;
 
 import java.util.List;
 

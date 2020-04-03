@@ -1,10 +1,8 @@
-package com.atwenli.gmall.user.dao;
+package com.atwenli.gmall.dao;
 
-import com.atwenli.gmall.user.bean.UmsMemberReceiveAddress;
-import org.springframework.stereotype.Repository;
+import com.atwenli.gmall.bean.UmsMemberReceiveAddress;
 import tk.mybatis.mapper.common.Mapper;
 
-@Repository
 public interface UmsMemberReceiveAddressMapper extends Mapper<UmsMemberReceiveAddress> {
     int deleteByPrimaryKey(Long id);
 

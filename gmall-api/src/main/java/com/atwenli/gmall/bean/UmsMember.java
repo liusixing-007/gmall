@@ -1,15 +1,10 @@
-package com.atwenli.gmall.user.bean;
+package com.atwenli.gmall.bean;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
-
-import javax.annotation.sql.DataSourceDefinition;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+
 public class UmsMember {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,14 +22,12 @@ public class UmsMember {
 
     private Integer status;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     private String icon;
 
     private Integer gender;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date birthday;
 
     private String city;

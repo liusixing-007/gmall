@@ -1,11 +1,8 @@
-package com.atwenli.gmall.user.dao;
+package com.atwenli.gmall.dao;
 
-import com.atwenli.gmall.user.bean.UmsMember;
-import org.springframework.stereotype.Repository;
+import com.atwenli.gmall.bean.UmsMember;
 import tk.mybatis.mapper.common.Mapper;
 
-import java.util.List;
-@Repository
 public interface UmsMemberMapper extends Mapper<UmsMember> {
     int deleteByPrimaryKey(Long id);
 
@@ -18,7 +15,4 @@ public interface UmsMemberMapper extends Mapper<UmsMember> {
     int updateByPrimaryKeySelective(UmsMember record);
 
     int updateByPrimaryKey(UmsMember record);
-
-    List<UmsMember> selectAllUser();
-
 }

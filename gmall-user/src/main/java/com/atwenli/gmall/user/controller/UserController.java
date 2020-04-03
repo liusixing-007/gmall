@@ -1,11 +1,11 @@
 package com.atwenli.gmall.user.controller;
 
-import com.atwenli.gmall.user.bean.UmsMember;
-import com.atwenli.gmall.user.bean.UmsMemberReceiveAddress;
+
+import com.atwenli.gmall.bean.UmsMember;
+import com.atwenli.gmall.bean.UmsMemberReceiveAddress;
 import com.atwenli.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;

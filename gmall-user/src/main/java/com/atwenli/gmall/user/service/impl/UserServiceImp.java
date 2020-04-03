@@ -1,10 +1,9 @@
 package com.atwenli.gmall.user.service.impl;
-
-import com.atwenli.gmall.user.bean.UmsMember;
-import com.atwenli.gmall.user.bean.UmsMemberReceiveAddress;
-import com.atwenli.gmall.user.dao.UmsMemberLevelMapper;
-import com.atwenli.gmall.user.dao.UmsMemberMapper;
-import com.atwenli.gmall.user.dao.UmsMemberReceiveAddressMapper;
+import com.atwenli.gmall.bean.UmsMember;
+import com.atwenli.gmall.bean.UmsMemberReceiveAddress;
+import com.atwenli.gmall.dao.UmsMemberLevelMapper;
+import com.atwenli.gmall.dao.UmsMemberMapper;
+import com.atwenli.gmall.dao.UmsMemberReceiveAddressMapper;
 import com.atwenli.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +28,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public List<UmsMember> getAllUser() {
-        List<UmsMember>umsMembers=umsMemberMapper.selectAll();
+        List<UmsMember> umsMembers=umsMemberMapper.selectAll();
         return umsMembers;
     }
 
